@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucas Barrionuevo — Portfolio</title>
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Go to top">
+      <span class="brand-mark">LB</span>
+      <span class="brand-text">Lucas Barrionuevo</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1>Hey, I'm <span class="accent">Lucas</span>.</h1>
+      <p class="subtitle">Full‑stack developer focused on JavaScript, Python, and data‑driven apps.</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-primary">See my projects</a>
+        <a href="#contact" class="btn btn-ghost">Contact me</a>
+      </div>
+      <ul class="socials">
+        <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+    <figure class="hero-photo-wrap">
+      <!-- Replace src with your best headshot -->
+      <img src="images/me1.jpg" alt="Photo of Lucas Barrionuevo" class="hero-photo"/>
+    </figure>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <header class="section-head">
+      <h2>About</h2>
+      <p>Quick intro</p>
+    </header>
+    <div class="about-grid">
+      <div>
+        <p>
+          I'm Lucas, a developer who enjoys building clean UIs and practical tools.
+          I’ve worked on web apps across the stack—front end (React/Next.js),
+          back end (Node/Express, Python/Flask/Streamlit), and data pipelines (Pandas/SQLAlchemy).
+        </p>
+        <p>
+          Recently I’ve focused on automating proposals & docs, building rules engines,
+          and shipping fast, reliable interfaces.
+        </p>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="resume.pdf" download>Download Resume</a>
+          <a class="btn btn-ghost" href="#contact">Work with me</a>
+        </div>
+      </div>
+      <figure class="about-photo-wrap">
+        <img src="images/me2.jpg" alt="Lucas working on a laptop" class="about-photo"/>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <header class="section-head">
+      <h2>Skills</h2>
+      <p>Tech I use</p>
+    </header>
+    <ul class="chips" aria-label="Skills list">
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>Node</li>
+      <li>Express</li>
+      <li>MongoDB</li>
+      <li>PostgreSQL</li>
+      <li>Python</li>
+      <li>Pandas</li>
+      <li>SQLAlchemy</li>
+      <li>Docker</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Git</li>
+      <li>C</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <header class="section-head">
+      <h2>Projects</h2>
+      <p>Real work I'm proud of</p>
+    </header>
+    <div id="projectsGrid" class="grid projects-grid"></div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="section container">
+  <header class="section-head">
+    <h2>Case Studies</h2>
+    <p>Selected impact-focused write-ups</p>
+  </header>
+  <div id="caseGrid" class="grid case-grid"></div>
+</section>
+
+    <!-- Hobbies -->
+  <section id="hobbies" class="section container">
+  <header class="section-head">
+    <h2>Hobbies</h2>
+    <p>Stuff I enjoy outside of code</p>
+  </header>
+  <div id="hobbiesGrid" class="grid hobbies-grid"></div>
+</section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="section container contact">
+    <header class="section-head">
+      <h2>Contact</h2>
+      <p>Let's build something</p>
+    </header>
+    <div class="contact-inner">
+      <p>
+        The fastest way to reach me is email. I typically respond within a day.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="mailto:your@email.com">Email me</a>
+      </p>
+      <ul class="socials socials-lg">
+        <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Lucas Barrionuevo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
