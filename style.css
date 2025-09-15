@@ -292,4 +292,24 @@ body {
 .hobby-blurb { margin: 0; color: var(--muted); }
 @media (max-width: 980px) { .hobbies-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 620px) { .hobbies-grid { grid-template-columns: 1fr; } }
+/* ---------- Other Projects ---------- */
+.other-grid { grid-template-columns: repeat(3, 1fr); }
+.op-card {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: .5rem;
+}
+.op-title { margin: 0; font-size: 1rem; }
+.op-desc { margin: 0; color: var(--muted); }
+@media (max-width: 980px) { .other-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .other-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  #particles-js { display: none; }
+}

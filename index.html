@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Lucas Barrionuevo — full‑stack developer building clean UIs and data‑driven apps." />
   <title>Lucas Barrionuevo — Portfolio</title>
 
   <!-- Font & Icons -->
@@ -20,11 +21,11 @@
       <span class="brand-text">Lucas Barrionuevo</span>
     </a>
 
-    <button class="nav-toggle" aria-label="Toggle navigation">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
       <i class="fa-solid fa-bars"></i>
     </button>
 
-    <nav class="site-nav" aria-label="Primary">
+    <nav id="primary-nav" class="site-nav" aria-label="Primary">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -127,6 +128,16 @@
   </header>
   <div id="caseGrid" class="grid case-grid"></div>
 </section>
+
+  <!-- Other Projects -->
+<section id="other-projects" class="section container">
+  <header class="section-head">
+    <h2>Other Projects</h2>
+    <p>Smaller builds & experiments</p>
+  </header>
+  <div id="otherGrid" class="grid other-grid"></div>
+</section>
+
 
     <!-- Hobbies -->
   <section id="hobbies" class="section container">
