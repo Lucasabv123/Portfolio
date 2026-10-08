@@ -1,523 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Lucas Barrionuevo, full-stack developer and Rutgers CS graduate. Explore ProfeRank EC, Perfumagic, and projects in business automation and machine learning."
-    />
-    <meta name="theme-color" content="#f6f5f1" />
-    <meta
-      property="og:title"
-      content="Lucas Barrionuevo — Full-stack developer"
-    />
-    <meta
-      property="og:description"
-      content="Thoughtful interfaces. Reliable systems. Selected work in web applications, business automation, and data."
-    />
-    <meta property="og:type" content="website" />
-    <title>Lucas Barrionuevo — Full-stack developer</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="Lucas Barrionuevo, home"
-          >lb<span>.</span></a
-        >
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="primary-nav"
-        >
-          Menu <span aria-hidden="true">＋</span>
-        </button>
-        <nav id="primary-nav" aria-label="Primary navigation">
-          <a href="#projects">Selected work</a>
-          <a href="#experience">Experience</a>
-          <a href="#about">About</a>
-          <a href="#contact" class="nav-contact"
-            >Let’s talk <span aria-hidden="true">↗</span></a
-          >
-        </nav>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Lucas Barrionuevo — full‑stack developer building clean UIs and data‑driven apps." />
+  <title>Lucas Barrionuevo — Portfolio</title>
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Go to top">
+      <span class="brand-mark">LB</span>
+      <span class="brand-text">Lucas Barrionuevo</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="primary-nav" class="site-nav" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <h1>Hey, I'm <span class="accent">Lucas</span>.</h1>
+      <p class="subtitle">Full‑stack developer focused on TypeScript, Python, and practical web applications.</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-primary">See my projects</a>
+        <a href="#contact" class="btn btn-ghost">Contact me</a>
       </div>
+      <ul class="socials">
+        <li><a href="https://github.com/Lucasabv123" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/lucasbv/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:lucasbv78910@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+    <figure class="hero-photo-wrap">
+      <!-- Replace src with your best headshot -->
+      <img src="images/me1.jpg" alt="Photo of Lucas Barrionuevo" class="hero-photo"/>
+    </figure>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container">
+    <header class="section-head">
+      <h2>About</h2>
+      <p>Quick intro</p>
     </header>
-    <main id="main">
-      <section id="home" class="hero container">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Lucas
-            Barrionuevo · Full-stack developer
-          </p>
-          <h1>
-            Real problems.<br />Thoughtful code.<br /><span
-              >Useful products.</span
-            >
-          </h1>
-          <p class="hero-description">
-            I build software that makes someone’s day easier. From helping
-            students choose a professor to helping a business run its daily
-            operations.
-          </p>
-          <div class="actions">
-            <a class="button primary" href="#projects"
-              >Explore my work <span aria-hidden="true">↓</span></a
-            >
-            <a
-              class="text-link"
-              href="resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >View résumé <span aria-hidden="true">↗</span></a
-            >
-          </div>
-          <p class="hero-footnote">
-            Rutgers CS ’26 <span aria-hidden="true">/</span> Ecuador &amp; New
-            Jersey
-          </p>
-        </div>
-        <div class="hero-aside">
-          <figure class="portrait">
-            <img
-              src="images/me1.jpg"
-              alt="Lucas Barrionuevo"
-              width="600"
-              height="750"
-              fetchpriority="high"
-            />
-            <figcaption>
-              <span>Meet the developer</span><span aria-hidden="true">↗</span>
-            </figcaption>
-          </figure>
-          <div class="currently">
-            <span class="small-label">RECENT WORK</span>
-            <p>
-              Business operations at <strong>Perfumagic</strong><br />Student
-              discovery with <strong>ProfeRank EC</strong>
-            </p>
-          </div>
-        </div>
-      </section>
-      <div class="stack-strip">
-        <div class="container">
-          <span>FROM INTERFACE TO DATABASE</span>
-          <p>
-            TypeScript <i>/</i> React &amp; Next.js <i>/</i> Python
-            <i>/</i> PostgreSQL
-          </p>
+    <div class="about-grid">
+      <div>
+        <p>
+          I'm Lucas, a developer who enjoys building clean UIs and practical tools.
+          I’ve worked on web apps across the stack—front end (React/Next.js),
+          back end (Node/Express, Python/Flask/Streamlit), and data pipelines (Pandas/SQLAlchemy).
+        </p>
+        <p>
+          Recently I’ve been building Perfumagic’s internal operations platform across sales,
+          field service, collections, and management, and expanding ProfeRank EC with school
+          rankings, bilingual reviews, and moderation tools. I graduated from Rutgers
+          University with a B.S. in Computer Science in May 2026.
+        </p>
+        <div class="about-actions">
+          <a class="btn btn-primary" href="resume.pdf" download>Download Resume</a>
+          <a class="btn btn-ghost" href="#contact">Work with me</a>
         </div>
       </div>
-      <section id="projects" class="section container">
-        <header class="section-heading">
-          <div>
-            <p class="eyebrow">01 / SELECTED WORK</p>
-            <h2>Built with a purpose.</h2>
-          </div>
-          <p>
-            Web products, internal tools, and the<br class="desktop-break" />
-            systems that make them work.
-          </p>
-        </header>
-        <article class="featured-project" id="perfumagic">
-          <div
-            class="project-visual perfumagic-visual"
-            aria-label="Diagram of Perfumagic’s four connected business modules"
-          >
-            <div class="visual-topline">
-              <span class="mini-brand">p<span> / perfumagic</span></span
-              ><span>PLATFORM OVERVIEW</span>
-            </div>
-            <div class="module-hub">
-              <div class="hub-center">
-                <span aria-hidden="true">✳</span
-                ><strong>One connected<br />operation.</strong>
-              </div>
-              <div class="module-grid">
-                <div>
-                  <span>01</span><strong>Ventas</strong
-                  ><small>Leads &amp; documents</small>
-                </div>
-                <div>
-                  <span>02</span><strong>Operaciones</strong
-                  ><small>Visits &amp; equipment</small>
-                </div>
-                <div>
-                  <span>03</span><strong>Cobranzas</strong
-                  ><small>Payments &amp; review</small>
-                </div>
-                <div>
-                  <span>04</span><strong>Gerencia</strong
-                  ><small>Approvals &amp; oversight</small>
-                </div>
-              </div>
-            </div>
-            <div class="visual-bottomline">
-              <span>DESKTOP + MOBILE</span><span>4 CONNECTED MODULES</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <p class="eyebrow">01 / BUSINESS SOFTWARE</p>
-            <h3>Perfumagic</h3>
-            <p class="project-subtitle">A working day, brought together.</p>
-            <p>
-              An internal operations platform bringing sales, field service,
-              collections, and management out of scattered spreadsheets and into
-              one application.
-            </p>
-            <ul class="project-highlights">
-              <li>Four modules designed for approximately 35 staff.</li>
-              <li>
-                Mobile visit reports with equipment readings and photo evidence.
-              </li>
-              <li>Payment review, PDF documents, and auditable approvals.</li>
-            </ul>
-            <ul class="tags" aria-label="Perfumagic technologies">
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>PostgreSQL</li>
-              <li>Supabase</li>
-            </ul>
-            <a class="text-link" href="#case-perfumagic"
-              >Inside the build <span aria-hidden="true">↗</span></a
-            >
-            <p class="project-note">
-              Internal company application · Private source
-            </p>
-          </div>
-        </article>
-        <article class="featured-project" id="proferank">
-          <div
-            class="project-visual proferank-visual"
-            aria-label="Overview of ProfeRank EC discovery, ratings, and bilingual reviews"
-          >
-            <div class="visual-topline">
-              <span class="mini-brand">pr<span> / ProfeRank EC</span></span
-              ><span>PRODUCT OVERVIEW</span>
-            </div>
-            <div class="rank-overview">
-              <span class="language-label"
-                >ES <span aria-hidden="true">⇄</span> EN</span
-              >
-              <h4>A better way to<br />choose your next class.</h4>
-              <div class="search-illustration">
-                <span aria-hidden="true">⌕</span> Professors, courses, schools
-                <span aria-hidden="true">↗</span>
-              </div>
-              <div class="rank-features">
-                <span>Discover</span><span>Review</span><span>Compare</span>
-              </div>
-            </div>
-            <div class="visual-bottomline">
-              <span>BUILT FOR STUDENTS IN ECUADOR</span
-              ><span aria-hidden="true">★★★★★</span>
-            </div>
-          </div>
-          <div class="project-content">
-            <p class="eyebrow">02 / STUDENT PLATFORM</p>
-            <h3>ProfeRank EC</h3>
-            <p class="project-subtitle">Choose classes with more context.</p>
-            <p>
-              A professor and course discovery platform for students in Ecuador,
-              connecting school directories, student reviews, and rankings in
-              one place.
-            </p>
-            <ul class="project-highlights">
-              <li>Search professors, courses, and universities.</li>
-              <li>School rankings with minimum review thresholds.</li>
-              <li>
-                Bilingual interfaces, review translation, and moderation tools.
-              </li>
-            </ul>
-            <ul class="tags" aria-label="ProfeRank technologies">
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>Prisma</li>
-              <li>PostgreSQL</li>
-              <li>FastAPI</li>
-            </ul>
-            <div class="actions project-actions">
-              <a
-                class="text-link"
-                href="https://github.com/Lucasabv123/proferankec"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Explore the code <span aria-hidden="true">↗</span></a
-              ><a class="text-link" href="#case-proferank"
-                >Inside the build <span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </div>
-        </article>
-        <div class="more-work-heading">
-          <h3>More things I’ve built</h3>
-          <span>Automation, data &amp; experimentation</span>
-        </div>
-        <div class="other-projects">
-          <article class="small-project">
-            <span class="project-number">03 / AUTOMATION</span>
-            <h4>KMON quotation builder</h4>
-            <p>
-              A Python tool that turns configurable equipment rules, pricing,
-              and images into ready-to-send Word proposals.
-            </p>
-            <ul class="tags">
-              <li>Python</li>
-              <li>Streamlit</li>
-              <li>SQLAlchemy</li>
-            </ul>
-            <a
-              class="text-link"
-              href="https://github.com/Lucasabv123/elevators"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View project <span aria-hidden="true">↗</span></a
-            >
-          </article>
-          <article class="small-project">
-            <span class="project-number">04 / DATA &amp; ML</span>
-            <h4>CRM churn risk pipeline</h4>
-            <p>
-              Streaming and batch data processing for churn prediction, with an
-              XGBoost scoring API and SHAP explanations.
-            </p>
-            <ul class="tags">
-              <li>Python</li>
-              <li>Kafka</li>
-              <li>XGBoost</li>
-              <li>Docker</li>
-            </ul>
-            <a
-              class="text-link"
-              href="https://github.com/Lucasabv123/Churn_Risk"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View project <span aria-hidden="true">↗</span></a
-            >
-          </article>
-          <article class="small-project">
-            <span class="project-number">05 / API &amp; ML</span>
-            <h4>CR-Decksmith</h4>
-            <p>
-              A Clash Royale deck analyzer using battle logs, card-role
-              mappings, and model-based recommendations with a heuristic
-              fallback.
-            </p>
-            <ul class="tags">
-              <li>Express</li>
-              <li>TypeScript</li>
-              <li>Next.js</li>
-            </ul>
-            <a
-              class="text-link"
-              href="https://github.com/Lucasabv123/clash-royale"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View project <span aria-hidden="true">↗</span></a
-            >
-          </article>
-        </div>
-      </section>
-      <section id="case-studies" class="case-section">
-        <div class="container section">
-          <header class="section-heading">
-            <div>
-              <p class="eyebrow">02 / ENGINEERING NOTES</p>
-              <h2>Beyond the interface.</h2>
-            </div>
-            <p>
-              A closer look at the decisions<br class="desktop-break" />
-              behind the products.
-            </p>
-          </header>
-          <details id="case-perfumagic" class="case-study">
-            <summary>
-              <span class="case-index">01</span
-              ><span
-                ><small>PERFUMAGIC</small
-                ><strong
-                  >Modernizing workflows without losing the rules.</strong
-                ></span
-              ><span class="expand-icon" aria-hidden="true">＋</span>
-            </summary>
-            <div class="case-body">
-              <div>
-                <h4>The challenge</h4>
-                <p>
-                  Move interconnected sales, service, and payment workflows from
-                  Google Sheets and Apps Script while preserving the business
-                  rules staff rely on.
-                </p>
-              </div>
-              <div>
-                <h4>What I built</h4>
-                <p>
-                  A Next.js and TypeScript platform with database-enforced
-                  access controls, audit histories, and approval flows. Field
-                  staff can report visits from a phone; office staff can review
-                  payments and generate commercial PDFs.
-                </p>
-              </div>
-              <div>
-                <h4>The engineering detail</h4>
-                <p>
-                  A local Apps Script compatibility runner and regression tests
-                  help preserve legacy behavior. Live duplicate-payment warnings
-                  link to existing receipts and preserve form data so staff can
-                  assess a payment before submitting it.
-                </p>
-              </div>
-            </div>
-          </details>
-          <details id="case-proferank" class="case-study">
-            <summary>
-              <span class="case-index">02</span
-              ><span
-                ><small>PROFERANK EC</small
-                ><strong
-                  >Making student feedback easier to find and trust.</strong
-                ></span
-              ><span class="expand-icon" aria-hidden="true">＋</span>
-            </summary>
-            <div class="case-body">
-              <div>
-                <h4>The challenge</h4>
-                <p>
-                  Help students navigate the relationships between universities,
-                  professors, and courses while keeping reviews useful and
-                  manageable.
-                </p>
-              </div>
-              <div>
-                <h4>What I built</h4>
-                <p>
-                  A relational Prisma/PostgreSQL model, Google sign-in through
-                  NextAuth, student submissions, review reporting, and an
-                  administrator moderation flow.
-                </p>
-              </div>
-              <div>
-                <h4>The engineering detail</h4>
-                <p>
-                  School rankings require at least three visible reviews. A
-                  separate FastAPI service translates reviews between English
-                  and Spanish; translations are cached by language to avoid
-                  repeating model inference.
-                </p>
-              </div>
-            </div>
-          </details>
-        </div>
-      </section>
-      <section id="experience" class="section container experience-section">
-        <div class="section-intro">
-          <p class="eyebrow">03 / EXPERIENCE</p>
-          <h2>Software meets<br />the real world.</h2>
-          <p>Building around the people<br />who actually use the tools.</p>
-        </div>
-        <div class="timeline">
-          <article>
-            <p class="timeline-date">JUL 2026 — PRESENT · ECUADOR</p>
-            <h3>Perfumagic / Aromalab</h3>
-            <p class="role">Full Stack Developer Intern</p>
-            <p>
-              Developing an operations platform across sales, field service,
-              collections, and management. Bringing together document
-              generation, access controls, and reliable business workflows.
-            </p>
-          </article>
-          <article>
-            <p class="timeline-date">MAY — AUG 2025 · ECUADOR</p>
-            <h3>KMON Ascensores</h3>
-            <p class="role">Software Engineering Intern</p>
-            <p>
-              Built quotation automation with Python and Streamlit, configurable
-              parts rules, Word document generation, and Excel-to-database
-              pricing updates.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="about" class="section container about-section">
-        <div class="about-image">
-          <img
-            src="images/me2.jpg"
-            alt="Lucas Barrionuevo, outside of work"
-            width="600"
-            height="700"
-            loading="lazy"
-          />
-        </div>
-        <div class="about-copy">
-          <p class="eyebrow">04 / A LITTLE ABOUT ME</p>
-          <h2>Curious by nature.<br />Practical by design.</h2>
-          <p>
-            I’m Lucas, a Rutgers University computer science graduate with
-            experience building applications for students and business teams.
-          </p>
-          <p>
-            I enjoy working across the stack: understanding a workflow,
-            designing a usable interface, and getting the data and business
-            logic right underneath it.
-          </p>
-          <div class="skill-groups">
-            <div>
-              <h3>Interfaces</h3>
-              <p>React · Next.js · TypeScript · HTML &amp; CSS</p>
-            </div>
-            <div>
-              <h3>Systems &amp; data</h3>
-              <p>Python · Node.js · Express · PostgreSQL · Prisma · Docker</p>
-            </div>
-            <div>
-              <h3>Outside the editor</h3>
-              <p>Photography, strength training, and a good game of chess.</p>
-            </div>
-          </div>
-          <a
-            class="text-link"
-            href="resume.pdf"
-            download="Lucas_Barrionuevo_Resume.pdf"
-            >Download my résumé <span aria-hidden="true">↓</span></a
-          >
-        </div>
-      </section>
-      <section id="contact" class="contact-section">
-        <div class="container">
-          <p class="eyebrow">05 / WHAT’S NEXT?</p>
-          <h2>Let’s build something<br /><span>that matters.</span></h2>
-          <p>
-            Have a role, a project, or an interesting problem in mind?<br />I’d
-            love to hear about it.
-          </p>
-          <a class="contact-email" href="mailto:lucasbv78910@gmail.com"
-            >lucasbv78910@gmail.com <span aria-hidden="true">↗</span></a
-          >
-          <div class="contact-links">
-            <a
-              href="https://github.com/Lucasabv123"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub ↗</a
-            ><a
-              href="https://www.linkedin.com/in/lucasbv/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LinkedIn ↗</a
-            ><a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="container site-footer">
-      <a class="brand" href="#home" aria-label="Back to top"
-        >lb<span>.</span></a
-      >
-      <p>© <span id="year">2026</span> Lucas Barrionuevo</p>
-      <a href="#home">Back to top ↑</a>
-    </footer>
-  </body>
+      <figure class="about-photo-wrap">
+        <img src="images/me2.jpg" alt="Photo of Lucas Barrionuevo" class="about-photo"/>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section container">
+    <header class="section-head">
+      <h2>Skills</h2>
+      <p>Tech I use</p>
+    </header>
+    <ul class="chips" aria-label="Skills list">
+      <li>JavaScript</li>
+      <li>TypeScript</li>
+      <li>React</li>
+      <li>Next.js</li>
+      <li>Prisma</li>
+      <li>Supabase</li>
+      <li>FastAPI</li>
+      <li>Node</li>
+      <li>Express</li>
+      <li>MongoDB</li>
+      <li>PostgreSQL</li>
+      <li>Python</li>
+      <li>Pandas</li>
+      <li>SQLAlchemy</li>
+      <li>Docker</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Git</li>
+      <li>C</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container">
+    <header class="section-head">
+      <h2>Projects</h2>
+      <p>Real work I'm proud of</p>
+    </header>
+    <div id="projectsGrid" class="grid projects-grid"></div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="case-studies" class="section container">
+  <header class="section-head">
+    <h2>Case Studies</h2>
+    <p>Selected impact-focused write-ups</p>
+  </header>
+  <div id="caseGrid" class="grid case-grid"></div>
+</section>
+
+  <!-- Other Projects -->
+<section id="other-projects" class="section container">
+  <header class="section-head">
+    <h2>Other Projects</h2>
+    <p>Smaller builds & experiments</p>
+  </header>
+  <div id="otherGrid" class="grid other-grid"></div>
+</section>
+
+
+    <!-- Hobbies -->
+  <section id="hobbies" class="section container">
+  <header class="section-head">
+    <h2>Hobbies</h2>
+    <p>Stuff I enjoy outside of code</p>
+  </header>
+  <div id="hobbiesGrid" class="grid hobbies-grid"></div>
+</section>
+
+
+
+  <!-- Contact -->
+  <section id="contact" class="section container contact">
+    <header class="section-head">
+      <h2>Contact</h2>
+      <p>Let's build something</p>
+    </header>
+    <div class="contact-inner">
+      <p>
+        The fastest way to reach me is email. I typically respond within a day.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="mailto:lucasbv78910@gmail.com">Email me</a>
+      </p>
+      <ul class="socials socials-lg">
+        <li><a href="https://github.com/Lucasabv123" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/lucasbv/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="mailto:lucasbv78910@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Lucas Barrionuevo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
 </html>
