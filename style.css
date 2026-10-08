@@ -313,3 +313,19 @@ body {
   * { animation: none !important; transition: none !important; }
   #particles-js { display: none; }
 }
+
+/* Small usability fixes; retain the original layout and visual theme. */
+html { scroll-padding-top: 90px; }
+.cta { flex-wrap: wrap; }
+.project-note { font-size: .85rem; }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 980px) {
+  .hero-photo-wrap { margin-inline: 0; }
+  .site-nav.is-open { top: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
