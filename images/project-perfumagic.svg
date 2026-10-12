@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<rect width="960" height="540" fill="#18241b"/>
+<g font-family="Arial,sans-serif" fill="#eef2e9">
+<text x="64" y="105" font-size="44" font-weight="700">Perfumagic</text>
+<text x="64" y="148" font-size="22" fill="#b9c9b2">Plataforma operativa · Four connected modules</text>
+<g fill="#25372a" stroke="#607659"><rect x="64" y="202" width="400" height="112" rx="14"/><rect x="488" y="202" width="408" height="112" rx="14"/><rect x="64" y="338" width="400" height="112" rx="14"/><rect x="488" y="338" width="408" height="112" rx="14"/></g>
+<g font-size="27"><text x="92" y="270">01  Ventas</text><text x="516" y="270">02  Operaciones</text><text x="92" y="406">03  Cobranzas</text><text x="516" y="406">04  Gerencia</text></g>
+<text x="64" y="498" font-size="17" fill="#b9c9b2">PLATFORM OVERVIEW</text>
+</g></svg>

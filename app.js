@@ -32,25 +32,33 @@ function initParticles() {
 /* ------- Content (edit these arrays) ------- */
 const projectsData = [
   {
+    title: "Perfumagic — Operations Platform",
+    desc: "Internal platform bringing sales, field service, collections, and management together. Four modules designed for about 35 staff, with mobile visit reports, commercial PDFs, payment controls, and audit histories.",
+    cover: "images/project-perfumagic.svg",
+    tags: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
+    links: {},
+    note: "Internal company application · Private source"
+  },
+  {
     title: "Elevator Quotation & Invoice Builder",
     desc: "Production Streamlit app that generates Word proposals in minutes with a rules engine & image pipelines.",
     cover: "images/project-invoice.jpg",
     tags: ["Python", "Streamlit", "Pandas", "SQLAlchemy", "DocxTemplate", "Docker"],
-    links: { live: "#", github: "#" }
+    links: { github: "https://github.com/Lucasabv123/elevators" }
   },
   {
     title: "Realtime Churn Alerts Pipeline",
     desc: "Kafka (Redpanda) → Python Consumer → Flask (XGBoost + SHAP) → Postgres notifications → Nylas Email.",
     cover: "images/hero-architecture.jpg",
     tags: ["Kafka/Redpanda", "Python", "Flask", "XGBoost", "SHAP", "Postgres", "Nylas"],
-    links: { live: "#", github: "#" }
+    links: { github: "https://github.com/Lucasabv123/Churn_Risk" }
   },
   {
     title: "ProfeRank EC",
-    desc: "Professor ratings web app with modern UI and SQLite/Prisma backend (WIP).",
+    desc: "Professor and course discovery for students in Ecuador, with school rankings, Google sign-in, review moderation, English/Spanish interfaces, and cached review translations.",
     cover: "images/project-proferank.jpg",
-    tags: ["Next.js", "TypeScript", "SQLite", "Tailwind"],
-    links: { live: "#", github: "#" }
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "FastAPI"],
+    links: { github: "https://github.com/Lucasabv123/proferankec" }
   }
 ];
 
@@ -59,42 +67,65 @@ const otherProjectsData = [
     title: "CR Decksmith",
     desc: "Express + TypeScript API that learns your Clash Royale playstyle and suggests decks via a lightweight model.",
     tags: ["Express","TypeScript","ML-lite"],
-    links: { live: "#", github: "#" }
+    links: { github: "https://github.com/Lucasabv123/clash-royale" }
   },
   {
     title: "AI Code Helper",
     desc: "CLI that explains common compiler/runtime errors and suggests fixes; vector search over docs.",
     tags: ["Python","Embeddings","CLI"],
-    links: { live: "#", github: "#" }
+    links: {}
   },
   {
     title: "BST & Matrix Exp (C)",
     desc: "Data structures + matrix exponentiation exercises with unit tests and benchmarks.",
     tags: ["C","DSA","Testing"],
-    links: { live: "#", github: "#" }
+    links: {}
   }
   // Add more items as you like
 ];
 
 const caseStudiesData = [
   {
+    title: "Perfumagic Operations Platform",
+    meta: "Perfumagic / Aromalab • Full Stack Developer Intern • July 2026–Present",
+    problem: "Bring spreadsheet-based business workflows into one application while preserving the rules staff rely on.",
+    bullets: [
+      "Built four connected modules for sales, field service, collections, and management",
+      "Implemented PostgreSQL row-level security, role-based permissions, and audit histories",
+      "Added live duplicate-payment warnings with linked receipts while preserving entered form data",
+      "Combined mobile equipment readings and photo evidence with PDF generation for quotations, contracts, and service orders",
+      "Created an Apps Script compatibility runner and regression tests to preserve legacy business rules"
+    ]
+  },
+  {
+    title: "ProfeRank EC — Discovery & Reviews",
+    meta: "Education • Ecuador",
+    problem: "Help students find professors and courses with useful, manageable student feedback.",
+    bullets: [
+      "Connected professors, courses, and schools through a Prisma/PostgreSQL data model",
+      "Added school rankings that require at least three visible reviews",
+      "Implemented student submissions, review reporting, and administrator moderation",
+      "Built English/Spanish interfaces and a FastAPI translation service with translations cached by language"
+    ]
+  },
+  {
     title: "Churn Prediction + Alerts",
-    meta: "B2B SaaS • 2024",
+    meta: "CRM analytics • July 2025",
     problem: "Detect churn risk early and notify CSMs with explainability.",
     bullets: [
       "Built Redpanda → Flask scoring API with XGBoost",
       "Used SHAP to surface top drivers",
-      "Cut time-to-alert from days to minutes"
+      "Exposed model predictions through a Flask API and containerized services with Docker Compose"
     ]
   },
   {
     title: "Proposal Automation",
-    meta: "Manufacturing • 2023",
+    meta: "KMON Ascensores • May–August 2025",
     problem: "Generate ready-to-send proposals with pricing and images.",
     bullets: [
       "Rule engine + templates via DocxTemplate",
       "Asset pipelines + watermarking",
-      "Reduced creation time by 90%"
+      "Reduced proposal preparation from 90 to 10 minutes"
     ]
   }
 ];
@@ -123,6 +154,14 @@ function renderGallery() {
 
 
 /* ------- Renderers ------- */
+function renderProjectLinks(project) {
+  const links = [
+    project.links.live && `<a href="${project.links.live}" target="_blank" rel="noreferrer noopener">Live</a>`,
+    project.links.github && `<a href="${project.links.github}" target="_blank" rel="noreferrer noopener">Code</a>`
+  ].filter(Boolean);
+  return links.length ? `<div class="card-actions">${links.join("")}</div>` : "";
+}
+
 function renderProjects() {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
@@ -135,10 +174,8 @@ function renderProjects() {
         <div class="tags">
           ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
         </div>
-        <div class="card-actions">
-          <a href="${p.links.live || '#'}" target="_blank" rel="noreferrer noopener">Live</a>
-          <a href="${p.links.github || '#'}" target="_blank" rel="noreferrer noopener">Code</a>
-        </div>
+        ${renderProjectLinks(p)}
+        ${p.note ? `<p class="project-desc project-note">${p.note}</p>` : ''}
       </div>
     </article>
   `).join("");
@@ -193,6 +230,20 @@ function navBehavior() {
     nav.setAttribute("id", navId);
     toggle.setAttribute("aria-controls", navId);
 
+    const closeNav = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    nav.addEventListener("click", event => {
+      if (event.target.closest("a")) closeNav();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        closeNav();
+        toggle.focus();
+      }
+    });
+    window.matchMedia("(min-width: 981px)").addEventListener("change", closeNav);
     toggle.addEventListener("click", () => {
       const isOpen = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(isOpen));
@@ -225,10 +276,7 @@ function renderOtherProjects() {
       <h3 class="op-title">${p.title}</h3>
       <p class="op-desc">${p.desc}</p>
       <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-      <div class="card-actions">
-        <a href="${p.links.live || '#'}" target="_blank" rel="noreferrer noopener">Live</a>
-        <a href="${p.links.github || '#'}" target="_blank" rel="noreferrer noopener">Code</a>
-      </div>
+      ${renderProjectLinks(p)}
     </article>
   `).join("");
 }
